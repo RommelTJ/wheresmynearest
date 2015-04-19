@@ -81,6 +81,8 @@
 		77B093761AE36AF00073468C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B093781AE36AF00073468C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		77B0937A1AE36AF00073468C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		77B093861AE36FC80073468C /* wheresmynearest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wheresmynearest.entitlements; sourceTree = "<group>"; };
+		77B093871AE370050073468C /* wheresmynearest WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "wheresmynearest WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		77B0933C1AE36ADC0073468C /* wheresmynearest */ = {
 			isa = PBXGroup;
 			children = (
+				77B093861AE36FC80073468C /* wheresmynearest.entitlements */,
 				77B0933F1AE36ADC0073468C /* AppDelegate.swift */,
 				77B093411AE36ADC0073468C /* ViewController.swift */,
 				77B093431AE36ADC0073468C /* Main.storyboard */,
@@ -171,6 +174,7 @@
 		77B093641AE36AF00073468C /* wheresmynearest WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				77B093871AE370050073468C /* wheresmynearest WatchKit Extension.entitlements */,
 				77B093681AE36AF00073468C /* InterfaceController.swift */,
 				77B0936A1AE36AF00073468C /* NotificationController.swift */,
 				77B0936C1AE36AF00073468C /* Images.xcassets */,
@@ -290,6 +294,12 @@
 				TargetAttributes = {
 					77B093391AE36ADC0073468C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 4L2V3AB2J2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					77B0934E1AE36ADC0073468C = {
 						CreatedOnToolsVersion = 6.3;
@@ -297,6 +307,12 @@
 					};
 					77B093621AE36AF00073468C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 4L2V3AB2J2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					77B0936F1AE36AF00073468C = {
 						CreatedOnToolsVersion = 6.3;
@@ -522,9 +538,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wheresmynearest/wheresmynearest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wheresmynearest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -532,9 +552,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wheresmynearest/wheresmynearest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wheresmynearest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -607,6 +631,9 @@
 		77B093831AE36AF00073468C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "wheresmynearest WatchKit Extension/wheresmynearest WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -614,6 +641,7 @@
 				INFOPLIST_FILE = "wheresmynearest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -621,9 +649,13 @@
 		77B093841AE36AF00073468C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "wheresmynearest WatchKit Extension/wheresmynearest WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "wheresmynearest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
