@@ -21,6 +21,7 @@
 		77B0937B1AE36AF00073468C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B0937A1AE36AF00073468C /* Images.xcassets */; };
 		77B0937E1AE36AF00073468C /* wheresmynearest WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 77B093631AE36AF00073468C /* wheresmynearest WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77B093891AE3744F0073468C /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B093881AE3744F0073468C /* tableRowController.swift */; };
+		77B0938B1AE376F20073468C /* mapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0938A1AE376F20073468C /* mapInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		77B093861AE36FC80073468C /* wheresmynearest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = wheresmynearest.entitlements; sourceTree = "<group>"; };
 		77B093871AE370050073468C /* wheresmynearest WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "wheresmynearest WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		77B093881AE3744F0073468C /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableRowController.swift; sourceTree = "<group>"; };
+		77B0938A1AE376F20073468C /* mapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				77B093681AE36AF00073468C /* InterfaceController.swift */,
 				77B0936A1AE36AF00073468C /* NotificationController.swift */,
 				77B093881AE3744F0073468C /* tableRowController.swift */,
+				77B0938A1AE376F20073468C /* mapInterfaceController.swift */,
 				77B0936C1AE36AF00073468C /* Images.xcassets */,
 				77B093651AE36AF00073468C /* Supporting Files */,
 			);
@@ -405,6 +408,7 @@
 			files = (
 				77B093891AE3744F0073468C /* tableRowController.swift in Sources */,
 				77B0936B1AE36AF00073468C /* NotificationController.swift in Sources */,
+				77B0938B1AE376F20073468C /* mapInterfaceController.swift in Sources */,
 				77B093691AE36AF00073468C /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
