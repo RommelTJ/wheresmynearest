@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var place4: UITextField!
     
     @IBAction func doUpdate(sender: AnyObject) {
-        //TODO
+        places = [place1.text, place2.text, place3.text, place4.text]
+        defaults?.setObject(places, forKey: "places")
     }
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         
         if places.count == 0 {
             places = ["cafe", "library", "bar", "restaurant"]
+            defaults?.setObject(places, forKey: "places")
         }
         
         place1.text = places[0]
