@@ -12,12 +12,21 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet weak var table: WKInterfaceTable!
     var places = [String]()
 
     var defaults = NSUserDefaults(suiteName: "group.com.rommelrico.wheresmynearest")
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        
+        
+    }
+
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         
         var storedPlaces: AnyObject? = defaults?.objectForKey("places")
         if let storedPlacesArray = storedPlaces as? NSArray {
@@ -33,12 +42,11 @@ class InterfaceController: WKInterfaceController {
             defaults?.setObject(places, forKey: "places")
         }
         
-        println(places)
-    }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+        table.setNumberOfRows(places.count, withRowType: "tableRowController")
+        for (index, place) in enumerate(places) {
+            let row = table.rowControllerAtIndex(index) as! tableRowController
+            row.tableRowLabel.setText(place)
+        }
     }
 
     override func didDeactivate() {
