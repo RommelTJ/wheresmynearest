@@ -22,6 +22,9 @@
 		77B0937E1AE36AF00073468C /* wheresmynearest WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 77B093631AE36AF00073468C /* wheresmynearest WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		77B093891AE3744F0073468C /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B093881AE3744F0073468C /* tableRowController.swift */; };
 		77B0938B1AE376F20073468C /* mapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0938A1AE376F20073468C /* mapInterfaceController.swift */; };
+		77B0938D1AE3889D0073468C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0938C1AE3889D0073468C /* CoreLocation.framework */; };
+		77B0938F1AE38A090073468C /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0938E1AE38A090073468C /* WatchKit.framework */; };
+		77B093901AE38A210073468C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0938C1AE3889D0073468C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,8 @@
 		77B093871AE370050073468C /* wheresmynearest WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "wheresmynearest WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		77B093881AE3744F0073468C /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableRowController.swift; sourceTree = "<group>"; };
 		77B0938A1AE376F20073468C /* mapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapInterfaceController.swift; sourceTree = "<group>"; };
+		77B0938C1AE3889D0073468C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		77B0938E1AE38A090073468C /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B0938D1AE3889D0073468C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B093901AE38A210073468C /* CoreLocation.framework in Frameworks */,
+				77B0938F1AE38A090073468C /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +125,8 @@
 		77B093311AE36ADC0073468C = {
 			isa = PBXGroup;
 			children = (
+				77B0938E1AE38A090073468C /* WatchKit.framework */,
+				77B0938C1AE3889D0073468C /* CoreLocation.framework */,
 				77B0933C1AE36ADC0073468C /* wheresmynearest */,
 				77B093521AE36ADC0073468C /* wheresmynearestTests */,
 				77B093641AE36AF00073468C /* wheresmynearest WatchKit Extension */,

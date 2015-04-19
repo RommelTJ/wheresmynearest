@@ -19,23 +19,17 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/search/json?location=-33.88471,151.218237&radius=100&sensor=true&key=AIzaSyCxYQhOaZK6PQb-mTvjQnavWtJcFHz9JGU")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-            if error == nil {
-                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-                println(jsonResult)
-            } else {
-                println(error)
-            }
-        })
-        task.resume()
-        
     }
 
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        pushControllerWithName("mapInterfaceController", context: places[rowIndex])
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        places = []
         
         var storedPlaces: AnyObject? = defaults?.objectForKey("places")
         if let storedPlacesArray = storedPlaces as? NSArray {

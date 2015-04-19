@@ -37,8 +37,13 @@
             <objects>
                 <controller identifier="mapInterfaceController" id="UJ7-6Y-7Yh" customClass="mapInterfaceController" customModule="wheresmynearest_WatchKit_Extension">
                     <items>
-                        <map width="1" height="1" alignment="left" id="fU1-ea-ne6"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="7BW-gE-AOl"/>
+                        <map width="1" alignment="left" id="fU1-ea-ne6"/>
                     </items>
+                    <connections>
+                        <outlet property="map" destination="fU1-ea-ne6" id="4pH-ia-ayP"/>
+                        <outlet property="placeLabel" destination="7BW-gE-AOl" id="Dsa-ca-qb0"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="445" y="345"/>

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    var locationManager = CLLocationManager()
     var defaults = NSUserDefaults(suiteName: "group.com.rommelrico.wheresmynearest")
     var places = [String]()
     
@@ -25,6 +27,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         
         var storedPlaces: AnyObject? = defaults?.objectForKey("places")
         if let storedPlacesArray = storedPlaces as? NSArray {
