@@ -11,11 +11,29 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    var places = [String]()
 
+    var defaults = NSUserDefaults(suiteName: "group.com.rommelrico.wheresmynearest")
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        var storedPlaces: AnyObject? = defaults?.objectForKey("places")
+        if let storedPlacesArray = storedPlaces as? NSArray {
+            for (index, value) in enumerate(storedPlacesArray) {
+                if let placeName = value as? String {
+                    places.append(placeName)
+                }
+            }
+        }
+        
+        if places.count == 0 {
+            places = ["cafe", "library", "bar", "restaurant"]
+            defaults?.setObject(places, forKey: "places")
+        }
+        
+        println(places)
     }
 
     override func willActivate() {
